@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18E7E52A1C2563BD0036641F /* UIScrollView+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7E5291C2563BD0036641F /* UIScrollView+AutoScroll.m */; };
 		18E7E52D1C2569550036641F /* CodeScrollTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7E52C1C2569550036641F /* CodeScrollTestViewController.m */; };
 		18F131CF1C23B66A00619953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F131CE1C23B66A00619953 /* main.m */; };
 		18F131D21C23B66A00619953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F131D11C23B66A00619953 /* AppDelegate.m */; };
-		18F131D51C23B66A00619953 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F131D41C23B66A00619953 /* ViewController.m */; };
 		18F131D81C23B66A00619953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F131D61C23B66A00619953 /* Main.storyboard */; };
 		18F131DA1C23B66A00619953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F131D91C23B66A00619953 /* Assets.xcassets */; };
 		18F131DD1C23B66A00619953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F131DB1C23B66A00619953 /* LaunchScreen.storyboard */; };
@@ -21,9 +19,6 @@
 		18F132061C23B7B100619953 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F132041C23B7B100619953 /* MyViewController.m */; };
 		18F132071C23B7B100619953 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F132051C23B7B100619953 /* MyViewController.xib */; };
 		18F1320A1C23C02400619953 /* UIAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F132091C23C02400619953 /* UIAutoScrollView.m */; };
-		18F1320E1C23F1E500619953 /* anniu_dibu.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F1320B1C23F1E500619953 /* anniu_dibu.png */; };
-		18F1320F1C23F1E500619953 /* anniu_dibu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F1320C1C23F1E500619953 /* anniu_dibu@2x.png */; };
-		18F132101C23F1E500619953 /* anniu_dibu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F1320D1C23F1E500619953 /* anniu_dibu@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,16 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18E7E5281C2563BD0036641F /* UIScrollView+AutoScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AutoScroll.h"; sourceTree = "<group>"; };
-		18E7E5291C2563BD0036641F /* UIScrollView+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AutoScroll.m"; sourceTree = "<group>"; };
 		18E7E52B1C2569550036641F /* CodeScrollTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeScrollTestViewController.h; sourceTree = "<group>"; };
 		18E7E52C1C2569550036641F /* CodeScrollTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeScrollTestViewController.m; sourceTree = "<group>"; };
 		18F131CA1C23B66A00619953 /* customUIScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customUIScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F131CE1C23B66A00619953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18F131D01C23B66A00619953 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18F131D11C23B66A00619953 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18F131D31C23B66A00619953 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18F131D41C23B66A00619953 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18F131D71C23B66A00619953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18F131D91C23B66A00619953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F131DC1C23B66A00619953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,9 +62,6 @@
 		18F132051C23B7B100619953 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		18F132081C23C02400619953 /* UIAutoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAutoScrollView.h; sourceTree = "<group>"; };
 		18F132091C23C02400619953 /* UIAutoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAutoScrollView.m; sourceTree = "<group>"; };
-		18F1320B1C23F1E500619953 /* anniu_dibu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anniu_dibu.png; sourceTree = "<group>"; };
-		18F1320C1C23F1E500619953 /* anniu_dibu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anniu_dibu@2x.png"; sourceTree = "<group>"; };
-		18F1320D1C23F1E500619953 /* anniu_dibu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "anniu_dibu@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,15 +112,10 @@
 		18F131CC1C23B66A00619953 /* customUIScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				18F1320B1C23F1E500619953 /* anniu_dibu.png */,
-				18F1320C1C23F1E500619953 /* anniu_dibu@2x.png */,
-				18F1320D1C23F1E500619953 /* anniu_dibu@3x.png */,
 				18F131D01C23B66A00619953 /* AppDelegate.h */,
 				18F131D11C23B66A00619953 /* AppDelegate.m */,
 				18F132001C23B69500619953 /* BaseViewController.h */,
 				18F132011C23B69500619953 /* BaseViewController.m */,
-				18F131D31C23B66A00619953 /* ViewController.h */,
-				18F131D41C23B66A00619953 /* ViewController.m */,
 				18F131D61C23B66A00619953 /* Main.storyboard */,
 				18F131D91C23B66A00619953 /* Assets.xcassets */,
 				18F131DB1C23B66A00619953 /* LaunchScreen.storyboard */,
@@ -143,8 +126,6 @@
 				18F132051C23B7B100619953 /* MyViewController.xib */,
 				18F132081C23C02400619953 /* UIAutoScrollView.h */,
 				18F132091C23C02400619953 /* UIAutoScrollView.m */,
-				18E7E5281C2563BD0036641F /* UIScrollView+AutoScroll.h */,
-				18E7E5291C2563BD0036641F /* UIScrollView+AutoScroll.m */,
 				18E7E52B1C2569550036641F /* CodeScrollTestViewController.h */,
 				18E7E52C1C2569550036641F /* CodeScrollTestViewController.m */,
 			);
@@ -283,11 +264,8 @@
 			files = (
 				18F131DD1C23B66A00619953 /* LaunchScreen.storyboard in Resources */,
 				18F131DA1C23B66A00619953 /* Assets.xcassets in Resources */,
-				18F132101C23F1E500619953 /* anniu_dibu@3x.png in Resources */,
-				18F1320F1C23F1E500619953 /* anniu_dibu@2x.png in Resources */,
 				18F132071C23B7B100619953 /* MyViewController.xib in Resources */,
 				18F131D81C23B66A00619953 /* Main.storyboard in Resources */,
-				18F1320E1C23F1E500619953 /* anniu_dibu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,13 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F131D51C23B66A00619953 /* ViewController.m in Sources */,
 				18F132021C23B69500619953 /* BaseViewController.m in Sources */,
 				18F131D21C23B66A00619953 /* AppDelegate.m in Sources */,
 				18F131CF1C23B66A00619953 /* main.m in Sources */,
 				18F132061C23B7B100619953 /* MyViewController.m in Sources */,
 				18E7E52D1C2569550036641F /* CodeScrollTestViewController.m in Sources */,
-				18E7E52A1C2563BD0036641F /* UIScrollView+AutoScroll.m in Sources */,
 				18F1320A1C23C02400619953 /* UIAutoScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
