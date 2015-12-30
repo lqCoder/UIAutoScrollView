@@ -1,7 +1,7 @@
 //
 //  MyScrollView.h
 //  customUIScrollView
-//  代码地址：https://github.com/lqCoder/UIAutoScrollView/blob/master/AutoScrollGif.gif
+//  代码地址：https://github.com/lqCoder/UIAutoScrollView
 //  Created by li qiao  on 15/12/18.
 //  Copyright © 2015年 apple. All rights reserved.
 //  如有问题可发邮件  275143680@qq.com
