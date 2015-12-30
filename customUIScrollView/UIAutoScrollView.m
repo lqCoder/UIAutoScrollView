@@ -11,9 +11,10 @@
 @interface UIAutoScrollView ()
 @property (nonatomic, assign) CGSize srcContentSize;
 @property (nonatomic, assign) CGFloat maxContentSizeHeight;
+@property (nonatomic, strong) NSMutableArray* controlArray; //这个数组里只装 UITextField,UITextView
 @end
 
-#define kKeyBoardHeight 285 //这个值是键盘在中文下最大的高度高一点
+#define kKeyBoardHeight 285 //这个值是比键盘在中文下最大的高度高一点，可以自己适当的调整。
 
 @implementation UIAutoScrollView
 - (void)dealloc
@@ -26,9 +27,10 @@
     [self addAutoScrollAbility];
 }
 
-- (void)addAutoScrollAbility////如果是xib的方式使用这个类，不需要调用这个addAutoScrollAbility方法，我在awakeFromNib方法里调用了。 用代码的方式初化这个类时需要调用。  注意这个方法最好只调用一次
+- (void)addAutoScrollAbility ////如果是xib的方式使用这个类，不需要调用这个addAutoScrollAbility方法，我在awakeFromNib方法里调用了。 用代码的方式初化这个类时需要调用。  注意这个方法最好只调用一次
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self]; //防止外部多次调用这个方法，注册多次通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self]; //防止外部多次调用这个方法，注册多次通知，视情况可以把这一句删除
+    self.controlArray = [[NSMutableArray alloc] init];
     self.srcContentSize = self.contentSize;
     UITapGestureRecognizer* selfTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfTapMethod)];
     [self addGestureRecognizer:selfTap]; //加这个是为了点击UISCrollView的时候关闭键盘，可视情况去掉
@@ -45,6 +47,7 @@
 { //计算最大的ContentSize的高度
     for (UIView* view in parentView.subviews) {
         if ([view isKindOfClass:[UITextField class]] || [view isKindOfClass:[UITextView class]]) {
+            [self.controlArray addObject:view];
             CGRect convertRect = [view convertRect:view.bounds toView:self];
             CGFloat y = convertRect.size.height + convertRect.origin.y;
             if (y > self.maxContentSizeHeight) {
@@ -77,12 +80,7 @@
 
 - (void)keyboardWillShow:(NSNotification*)aNotification
 {
-    [self ergodicAllSubViews:self];
-}
-
-- (void)ergodicAllSubViews:(UIView*)parentViews
-{
-    for (UIView* view in parentViews.subviews) {
+    for (UIView* view in self.controlArray) {
         if (view.isFirstResponder) {
             CGRect convertRect = [view convertRect:view.bounds toView:self];
             CGFloat marginBottom = self.frame.size.height - (convertRect.origin.y + convertRect.size.height - self.contentOffset.y);
@@ -96,9 +94,6 @@
                 [self setContentOffset:CGPointMake(self.frame.origin.x, originY) animated:YES];
             }
             return;
-        }
-        if (view.subviews.count > 0) {
-            [self ergodicAllSubViews:view];
         }
     }
 }
