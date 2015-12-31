@@ -32,15 +32,17 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self]; //防止外部多次调用这个方法，注册多次通知，视情况可以把这一句删除
     self.controlArray = [[NSMutableArray alloc] init];
     self.srcContentSize = self.contentSize;
-    UITapGestureRecognizer* selfTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfTapMethod)];
-    [self addGestureRecognizer:selfTap]; //加这个是为了点击UISCrollView的时候关闭键盘，可视情况去掉
-
+    
     //注册键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHidden:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-
+    
     [self countContentMaxHeight:self];
     self.maxContentSizeHeight = self.maxContentSizeHeight + kKeyBoardHeight + 20; //这个+20可以看情况去掉，只是保留下面有个间距
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self endEditing:YES];
 }
 
 - (void)countContentMaxHeight:(UIView*)parentView
@@ -68,11 +70,6 @@
     }
 }
 
-- (void)selfTapMethod
-{
-    [self endEditing:YES];
-}
-
 - (void)keyboardWillHidden:(NSNotification*)aNotification
 {
     self.contentSize = self.srcContentSize;
@@ -84,7 +81,7 @@
         if (view.isFirstResponder) {
             CGRect convertRect = [view convertRect:view.bounds toView:self];
             CGFloat marginBottom = self.frame.size.height - (convertRect.origin.y + convertRect.size.height - self.contentOffset.y);
-
+            
             if (self.contentSize.height < self.maxContentSizeHeight) {
                 self.contentSize = CGSizeMake(self.contentSize.width, self.maxContentSizeHeight);
             }
