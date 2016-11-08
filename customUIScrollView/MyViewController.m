@@ -8,9 +8,10 @@
 
 #import "CodeScrollTestViewController.h"
 #import "MyViewController.h"
+#import "ManagerKeyBoard.h"
 
 @interface MyViewController ()
-
+@property (nonatomic,strong) ManagerKeyBoard* managerKeyBoard;
 @end
 
 @implementation MyViewController
@@ -19,6 +20,9 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"xib类型测试";
+    
+    self.managerKeyBoard=[[ManagerKeyBoard alloc] init];
+    [self.managerKeyBoard registerView:self.view];
 }
 
 - (IBAction)goCodeScroll:(id)sender

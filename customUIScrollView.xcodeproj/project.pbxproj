@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0485923A1DD17E7800E001E9 /* ManagerKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 048592391DD17E7800E001E9 /* ManagerKeyBoard.m */; };
 		18E7E52D1C2569550036641F /* CodeScrollTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7E52C1C2569550036641F /* CodeScrollTestViewController.m */; };
 		18F131CF1C23B66A00619953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F131CE1C23B66A00619953 /* main.m */; };
 		18F131D21C23B66A00619953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F131D11C23B66A00619953 /* AppDelegate.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048592381DD17E7800E001E9 /* ManagerKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerKeyBoard.h; sourceTree = "<group>"; };
+		048592391DD17E7800E001E9 /* ManagerKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerKeyBoard.m; sourceTree = "<group>"; };
 		18E7E52B1C2569550036641F /* CodeScrollTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeScrollTestViewController.h; sourceTree = "<group>"; };
 		18E7E52C1C2569550036641F /* CodeScrollTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeScrollTestViewController.m; sourceTree = "<group>"; };
 		18F131CA1C23B66A00619953 /* customUIScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customUIScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +115,8 @@
 		18F131CC1C23B66A00619953 /* customUIScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				048592381DD17E7800E001E9 /* ManagerKeyBoard.h */,
+				048592391DD17E7800E001E9 /* ManagerKeyBoard.m */,
 				18F131D01C23B66A00619953 /* AppDelegate.h */,
 				18F131D11C23B66A00619953 /* AppDelegate.m */,
 				18F132001C23B69500619953 /* BaseViewController.h */,
@@ -292,6 +297,7 @@
 			files = (
 				18F132021C23B69500619953 /* BaseViewController.m in Sources */,
 				18F131D21C23B66A00619953 /* AppDelegate.m in Sources */,
+				0485923A1DD17E7800E001E9 /* ManagerKeyBoard.m in Sources */,
 				18F131CF1C23B66A00619953 /* main.m in Sources */,
 				18F132061C23B7B100619953 /* MyViewController.m in Sources */,
 				18E7E52D1C2569550036641F /* CodeScrollTestViewController.m in Sources */,

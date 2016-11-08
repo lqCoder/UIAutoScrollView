@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self addAutoScrollAbility];
 }
 
@@ -41,9 +42,9 @@
     self.maxContentSizeHeight = self.maxContentSizeHeight + kKeyBoardHeight + 20; //这个+20可以看情况去掉，只是保留下面有个间距
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self endEditing:YES];
-}
+//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self endEditing:YES];
+//}  加上这个方法，有时候会带来方便，但也有可能会引起一别的控件触摸的问题。
 
 - (void)countContentMaxHeight:(UIView*)parentView
 { //计算最大的ContentSize的高度

@@ -8,9 +8,11 @@
 
 #import "CodeScrollTestViewController.h"
 #import "UIAutoScrollView.h"
+#import "ManagerKeyBoard.h"
 
 @interface CodeScrollTestViewController ()
 @property (nonatomic,strong) UIAutoScrollView* tmpScrollView;
+@property (nonatomic,strong) ManagerKeyBoard* managerKeyBoard;
 @end
 
 @implementation CodeScrollTestViewController
@@ -18,10 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title=@"code类型测试";
+    self.managerKeyBoard=[[ManagerKeyBoard alloc] init];
+    [self.managerKeyBoard registerView:self.view];
     
-    self.view.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height);//注意，这里必须设置下view的frame，原因是这时候view的高度已经超出了手机屏幕。超出了navigationBar和statusBar的高度. 如果不这样设置后面的代码设置UIAutoScrollView的frame等于view的frame的时候，会造成UIAutoScrollView超出手机屏幕，这样在UIAutoScrollView内部计算的时候会出bug.
+//    self.view.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height);//注意，这里必须设置下view的frame，原因是这时候view的高度已经超出了手机屏幕。超出了navigationBar和statusBar的高度. 如果不这样设置后面的代码设置UIAutoScrollView的frame等于view的frame的时候，会造成UIAutoScrollView超出手机屏幕，这样在UIAutoScrollView内部计算的时候会出bug.
     
-    UIAutoScrollView* myScrollView=[[UIAutoScrollView alloc] initWithFrame:self.view.frame];
+//    UIAutoScrollView* myScrollView=[[UIAutoScrollView alloc] initWithFrame:self.view.frame];   这种设置大小的方式会出问题，要用下面的方式或者上面已经被注释的方式。
+    UIAutoScrollView* myScrollView=[[UIAutoScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height)];
     myScrollView.backgroundColor=[UIColor grayColor];
     myScrollView.contentSize=CGSizeMake(self.view.frame.size.width, 700);
     
